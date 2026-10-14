@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: hotel-tycoon-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_TOKEN
+        sync: false 
+      - key: WEBAPP_URL
+        sync: false 
+      - key: PORT
+        value: 10000 
